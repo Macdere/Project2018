@@ -18,6 +18,12 @@ URL: https://poly.google.com/view/2SkKFl4GjIr
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
+Title: Home Studio
+Author: Michael Marlow
+URL: https://poly.google.com/view/8kc671H9g9w
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
 Title: Land Creation nr 2 in Doodle3D
 Author: Rick Companje
 URL: https://poly.google.com/view/5qvyWhWns5f
