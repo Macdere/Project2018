@@ -6,6 +6,12 @@ URL: https://poly.google.com/view/4PazXqve8xz
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
+Title: chest
+Author: Vas Pupin
+URL: https://poly.google.com/view/1Ju1RPEoRpq
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
 Title: Earth - Terrain
 Author: Robert Mirabelle
 URL: https://poly.google.com/view/2SkKFl4GjIr
@@ -15,5 +21,11 @@ https://creativecommons.org/licenses/by/3.0/legalcode
 Title: Land Creation nr 2 in Doodle3D
 Author: Rick Companje
 URL: https://poly.google.com/view/5qvyWhWns5f
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Metal Door
+Author: Wesley Thompson
+URL: https://poly.google.com/view/1HgCh8VyTLu
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
