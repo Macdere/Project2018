@@ -30,6 +30,12 @@ URL: https://poly.google.com/view/5qvyWhWns5f
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
+Title: Luggage
+Author: Poly by Google
+URL: https://poly.google.com/view/ezEfa_eupwK
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
 Title: Metal Door
 Author: Wesley Thompson
 URL: https://poly.google.com/view/1HgCh8VyTLu
