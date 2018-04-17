@@ -1151,6 +1151,8 @@ MonoBehaviour:
   guiObject: {fileID: 1111327848}
   nope: {fileID: 644391368}
   triggerKey: {fileID: 1045248727}
+  inventory: {fileID: 0}
+  levelToLoad: _mainScene
   quest2: {fileID: 910789494}
   quest3: {fileID: 1454653134}
   sceneName: mainScene
@@ -1967,6 +1969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a972c71f5448fe4cb6c997150ff491d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: []
   keyTrigger: {fileID: 1045248727}
   bagTrigger: {fileID: 355362701}
   schoolBag: {fileID: 2043451921}

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class triggerDoor : MonoBehaviour {
 
@@ -9,10 +11,12 @@ public class triggerDoor : MonoBehaviour {
 
 	public GameObject triggerKey;
 
+	public inventorySystem inventory;
+
 	public GameObject quest2;
 	public GameObject quest3;
 
-	public string sceneName;
+	public string levelToLoad;
 
 	// Use this for initialization
 	void Start () {
@@ -21,15 +25,19 @@ public class triggerDoor : MonoBehaviour {
 
 	void OnTriggerStay(Collider other) {
 		if (other.gameObject.tag == "Player") {
-			// if character.inventory don't contains the 2 items bag and keys then:
+			if (inventory.inventory.GetValue(1)){
+				nope.SetActive (true);
 
-			nope.SetActive(true);
+				triggerKey.SetActive (true);
 
-			triggerKey.SetActive(true);
-
-			quest2.SetActive(false);
-			quest3.SetActive(true);
-			//else if character.inventory contains the 2 items then: allow th player to open the door with e to a new scene
+				quest2.SetActive (false);
+				quest3.SetActive (true);
+			
+				//else if character.inventory contains the 2 items then: allow th player to open the door with e to a new scene
+				if ((System.Array.IndexOf(inventory.inventory,"schoolBag") != -1) && (System.Array.IndexOf(inventory.inventory,"Key") != -1)) {
+					SceneManager.LoadScene (levelToLoad);
+				}
+			}
 		}
 	}
 	void OnTriggerExit(){
