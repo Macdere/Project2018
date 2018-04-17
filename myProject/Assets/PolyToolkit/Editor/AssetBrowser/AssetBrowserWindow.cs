@@ -1141,7 +1141,7 @@ public class AssetBrowserWindow : EditorWindow {
 
   private void OnDestroy() {
     PtDebug.Log("ABW: destroying.");
-    manager.SetRefreshCallback(null);
+    //manager.SetRefreshCallback(null); Just changed it because that was the reason of an instansiation error .
   }
 
   private struct CategoryInfo {
