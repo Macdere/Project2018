@@ -26,6 +26,8 @@ public class pickUpKey : MonoBehaviour {
 
 				guiObject.SetActive(false);
 
+				inventorySystem.inventory.Add ("Key");
+
 				quest3.SetActive(false);
 				quest4.SetActive(true);
 			}

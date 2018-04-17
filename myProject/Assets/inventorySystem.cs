@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class inventorySystem : MonoBehaviour {
 
-	public string[] inventory;
+	public static List<string> inventory = new List<string>();
 
-
-	// Use this for initialization
-	void Start () {
-		inventory = new string[]{"",""};
+	public static List<string> getList(){
+			return inventory;
+		
 	}
+
+	public static void Add(string tag){
+		inventory.Add(tag);
+	}
+
 
 }

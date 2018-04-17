@@ -11,8 +11,6 @@ public class triggerDoor : MonoBehaviour {
 
 	public GameObject triggerKey;
 
-	public inventorySystem inventory;
-
 	public GameObject quest2;
 	public GameObject quest3;
 
@@ -25,18 +23,19 @@ public class triggerDoor : MonoBehaviour {
 
 	void OnTriggerStay(Collider other) {
 		if (other.gameObject.tag == "Player") {
-			if (inventory.inventory.GetValue(1)){
+			guiObject.SetActive(true);
+			// if you don't have the key
+			if(!inventorySystem.inventory.Contains("Key")){
 				nope.SetActive (true);
-
+				guiObject.SetActive(false);
 				triggerKey.SetActive (true);
 
 				quest2.SetActive (false);
 				quest3.SetActive (true);
-			
+			}
 				//else if character.inventory contains the 2 items then: allow th player to open the door with e to a new scene
-				if ((System.Array.IndexOf(inventory.inventory,"schoolBag") != -1) && (System.Array.IndexOf(inventory.inventory,"Key") != -1)) {
+			if (inventorySystem.inventory.Contains("Key") && Input.GetButtonDown("Use")) {
 					SceneManager.LoadScene (levelToLoad);
-				}
 			}
 		}
 	}

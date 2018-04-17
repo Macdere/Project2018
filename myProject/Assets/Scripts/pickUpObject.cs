@@ -9,6 +9,8 @@ public class pickUpObject : MonoBehaviour {
 	public GameObject triggerBag;
 	public GameObject triggerDoor;
 
+	public List<string> inventory = inventorySystem.getList ();
+
 	public GameObject quest1;
 	public GameObject quest2;
 
@@ -28,6 +30,8 @@ public class pickUpObject : MonoBehaviour {
 				triggerDoor.SetActive(true);
 
 				guiObject.SetActive(false);
+
+				inventorySystem.inventory.Add ("schoolBag");
 
 				quest1.SetActive(false);
 				quest2.SetActive(true);
