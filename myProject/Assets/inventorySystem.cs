@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class inventorySystem : MonoBehaviour {
 
-	private List<Object> inventory = new List<Object> ();
+	public List<string> inventory;
 
 	public GameObject keyTrigger;
 	public GameObject bagTrigger;
@@ -14,24 +14,18 @@ public class inventorySystem : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		inventory = new List<string>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(!bagTrigger.activeInHierarchy && !schoolBag.activeInHierarchy){
-			var g = Resources.FindObjectsOfTypeAll(typeof(GameObject));
-			Object nb1 = g[0];
-			inventory.Add(nb1);
-			Debug.Log(nb1);
+			inventory.Add("schoolBag");
 			Debug.Log(inventory[0]);
 		}
 
 		if(!keyTrigger.activeInHierarchy && !key.activeInHierarchy){
-			var g = Resources.FindObjectsOfTypeAll(typeof(GameObject));
-			Object obj2 = g [1];
-			inventory.Add(obj2);
-			Debug.Log(obj2);
+			inventory.Add("key");
 			Debug.Log(inventory[1]);
 		}
 	}
