@@ -976,7 +976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guiObject: {fileID: 1765566287}
-  levelToLoad: _Menu
+  levelToLoad: _Apartement
 --- !u!1 &1208993039
 GameObject:
   m_ObjectHideFlags: 0

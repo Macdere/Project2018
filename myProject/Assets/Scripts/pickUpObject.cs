@@ -9,7 +9,6 @@ public class pickUpObject : MonoBehaviour {
 	public GameObject triggerBag;
 	public GameObject triggerDoor;
 
-	public List<string> inventory = inventorySystem.getList ();
 
 	public GameObject quest1;
 	public GameObject quest2;
