@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class onTriggerChangeScene : MonoBehaviour {
 
+
 	public GameObject guiObject;
 	public string levelToLoad;
 

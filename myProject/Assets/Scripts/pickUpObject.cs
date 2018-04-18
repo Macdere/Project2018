@@ -19,6 +19,9 @@ public class pickUpObject : MonoBehaviour {
 		guiObject.SetActive(false);
 	}
 
+	void Update(){
+	}
+
 	void OnTriggerStay(Collider other) {
 		if (other.gameObject.tag == "Player") {
 			guiObject.SetActive(true);
