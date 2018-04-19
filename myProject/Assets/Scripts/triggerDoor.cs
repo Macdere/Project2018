@@ -10,6 +10,7 @@ public class triggerDoor : MonoBehaviour {
 	public GameObject nope;
 
 	public GameObject triggerKey;
+	public GameObject doorTrigger;
 
 	public GameObject quest2;
 	public GameObject quest3;
@@ -19,16 +20,27 @@ public class triggerDoor : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		guiObject.SetActive(false);
+
 	}
+
+	/*void Update(){
+		if(playerStats.bagAndKey == true){
+			doorTrigger.SetActive (true);
+			Debug.Log ("ajhaahhaha");
+		}
+	}*/
+
 
 
 	// a fixer pour gere le retour dans la chambre sans les triggers et les pckable objects
 	void OnTriggerStay(Collider other) {
 		if (other.gameObject.tag == "Player") {
-			if (playerStats.bagAndKey = false) {
-				guiObject.SetActive (true);
+			if (playerStats.bagAndKey == false) {
+				if(inventorySystem.inventory.Contains("schoolBag")){
+					guiObject.SetActive (true);
+				}
 				// if you don't have the key
-				if (!inventorySystem.inventory.Contains ("Key")) {
+				if (!inventorySystem.inventory.Contains ("Key") && (inventorySystem.inventory.Contains("schoolBag"))) {
 					nope.SetActive (true);
 					guiObject.SetActive (false);
 					triggerKey.SetActive (true);
@@ -36,11 +48,11 @@ public class triggerDoor : MonoBehaviour {
 					quest2.SetActive (false);
 					quest3.SetActive (true);
 				}
-				//else if character.inventory contains the 2 items then: allow th player to open the door with e to a new scene
-				if (inventorySystem.inventory.Contains ("Key") && Input.GetButtonDown ("Use")) {
-					SceneManager.LoadScene (levelToLoad);
-				}
-			if (playerStats.bagAndKey = true && Input.GetButtonDown ("Use")) {
+
+			}
+			if (playerStats.bagAndKey == true) {
+				guiObject.SetActive (true);
+				if(Input.GetButtonDown("Use")){
 					SceneManager.LoadScene (levelToLoad);
 				}
 			}

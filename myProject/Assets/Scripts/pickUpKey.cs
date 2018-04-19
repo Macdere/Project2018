@@ -29,7 +29,6 @@ public class pickUpKey : MonoBehaviour {
 				inventorySystem.inventory.Add ("Key");
 
 				quest3.SetActive(false);
-				quest4.SetActive(true);
 			}
 		}
 	}
