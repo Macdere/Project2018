@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerControler : MonoBehaviour {
 
+	playerMotor motor;
+
 	public LayerMask movementMask;
 	Camera cam;
 	public Interactable focus;
@@ -44,9 +46,11 @@ public class PlayerControler : MonoBehaviour {
 
 	void setFocus(Interactable newFocus){
 		focus = newFocus;
+		motor.FollowTarget (newFocus);
 	}
 
 	void removeFocus(){
 		focus = null;
+		motor.stopFollowTarget ();
 	}
 }
