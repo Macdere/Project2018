@@ -6,7 +6,6 @@ public class PlayerControler : MonoBehaviour {
 
 	playerMotor motor;
 
-	public LayerMask movementMask;
 	Camera cam;
 	public Interactable focus;
 
@@ -45,12 +44,24 @@ public class PlayerControler : MonoBehaviour {
 	}
 
 	void setFocus(Interactable newFocus){
+
+		if(newFocus != focus){
+			if (focus != null)
+				focus.OnDefocused ();
+			
 		focus = newFocus;
-		motor.FollowTarget (newFocus);
+		//motor.FollowTarget (focus);
+		}
+		newFocus.OnFocused (transform);
 	}
 
 	void removeFocus(){
+
+		if (focus != null) {
+			focus.OnDefocused ();
+		}
+
 		focus = null;
-		motor.stopFollowTarget ();
+		//motor.stopFollowTarget ();
 	}
 }
