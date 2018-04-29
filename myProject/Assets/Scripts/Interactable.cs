@@ -11,11 +11,16 @@ public class Interactable : MonoBehaviour {
 
 	Transform player;
 
+	public virtual void Interact(){
+		// This is meant to be overWritten
+		Debug.Log("Interacting");
+	}
+
 	void Update() {
 		if(isFocus && !hasInteracted){
 			float distance = Vector3.Distance (player.position, transform.position);
 			if(distance <= radius){
-				Debug.Log("Interacting");
+				Interact ();
 				hasInteracted = true;
 			}
 		}
@@ -25,6 +30,7 @@ public class Interactable : MonoBehaviour {
 		isFocus = true;
 		player = playerTransform;
 		hasInteracted = false;
+		faceTarget (transform); // Need to see why it's not working
 	}
 
 	public void OnDefocused(){
@@ -36,5 +42,9 @@ public class Interactable : MonoBehaviour {
 	void OnDrawGizmosSelected(){
 		Gizmos.color = Color.yellow;
 		Gizmos.DrawWireSphere (transform.position,radius);
+	}
+
+	void faceTarget(Transform ourObject){
+		transform.LookAt (ourObject);
 	}
 }
