@@ -33,7 +33,7 @@ public class pickUpObject : MonoBehaviour {
 
 				guiObject.SetActive(false);
 
-				inventorySystem.inventory.Add ("schoolBag");
+				inventorySystem.invent.Add ("schoolBag");
 
 				quest1.SetActive(false);
 				quest2.SetActive(true);

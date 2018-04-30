@@ -36,11 +36,11 @@ public class triggerDoor : MonoBehaviour {
 	void OnTriggerStay(Collider other) {
 		if (other.gameObject.tag == "Player") {
 			if (playerStats.bagAndKey == false) {
-				if(inventorySystem.inventory.Contains("schoolBag")){
+				if(inventorySystem.invent.Contains("schoolBag")){
 					guiObject.SetActive (true);
 				}
 				// if you don't have the key
-				if (!inventorySystem.inventory.Contains ("Key") && (inventorySystem.inventory.Contains("schoolBag"))) {
+				if (!inventorySystem.invent.Contains ("Key") && (inventorySystem.invent.Contains("schoolBag"))) {
 					nope.SetActive (true);
 					guiObject.SetActive (false);
 					triggerKey.SetActive (true);

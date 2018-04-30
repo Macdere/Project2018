@@ -17,7 +17,8 @@ public class PlayerControler : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical")){
+		//if(Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical")){
+		if(Input.GetButtonDown("deFocus")){
 			Ray ray = cam.ScreenPointToRay (Input.mousePosition);
 			RaycastHit hit;
 

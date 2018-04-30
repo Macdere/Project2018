@@ -9,7 +9,7 @@ public class playerStats : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		// Need to keep the condition if the player don't restart a new game so he will already have picked up the items
-		if(inventorySystem.inventory.Contains("schoolBag") && (inventorySystem.inventory.Contains("Key"))){
+		if(inventorySystem.invent.Contains("schoolBag") && (inventorySystem.invent.Contains("Key"))){
 			bagAndKey = true;
 		}else{
 			bagAndKey = false;
@@ -17,7 +17,7 @@ public class playerStats : MonoBehaviour {
 	}
 
 	void Update(){
-		if (inventorySystem.inventory.Contains ("schoolBag") && (inventorySystem.inventory.Contains ("Key"))) {
+		if (inventorySystem.invent.Contains ("schoolBag") && (inventorySystem.invent.Contains ("Key"))) {
 			bagAndKey = true;
 		}
 	}
