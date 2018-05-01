@@ -7,4 +7,10 @@ public class Items : ScriptableObject {
 	public Sprite icon = null; // for the inventory to add icons in it
 	public bool isDefaultItem = false;
 
+
+	public virtual void Use (){
+		// Something will happened concidering the object we use from the Inventory
+
+		Debug.Log (name + " use");
+	}
 }
