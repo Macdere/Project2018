@@ -8,9 +8,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a6cc3af0e7cecd43a22aadb0332d201, type: 3}
-  m_Name: Test Item
+  m_Script: {fileID: 11500000, guid: ffdadff573dd38c4596ff84ec2a0a3ab, type: 3}
+  m_Name: Helmet of Odin
   m_EditorClassIdentifier: 
-  name: Sword of Chaos
-  icon: {fileID: 0}
+  name: Helmet of Odin
+  icon: {fileID: 21300000, guid: 52b1e3fc60614e446b61e1c6bb148f57, type: 3}
   isDefaultItem: 0
+  equipSlot: 0
+  healthModifier: 30
+  damageModifier: 0
