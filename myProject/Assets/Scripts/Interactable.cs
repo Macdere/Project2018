@@ -14,7 +14,7 @@ public class Interactable : MonoBehaviour {
 
 	public virtual void Interact(){
 		// This is meant to be overWritten
-		Debug.Log("Interacting");
+		//Debug.Log("Interacting");
 	}
 
 	void Update() {

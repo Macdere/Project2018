@@ -45,4 +45,10 @@ public class playerStats : characterStats {
 		}
 	}
 
+	public override void Die(){
+		base.Die ();
+		//Kill the player. I will maybe restart the scen if the player died
+		PlayerManager.instance.playerKilled();
+	}
+
 }
