@@ -3,24 +3,18 @@
 public class characterStats : MonoBehaviour {
 
 	public int maxHealth = 100;
-	public int currentHealth{ get; private set;}
+	public int currentHealth{ get; set;}
 
 	public Stat damage;
+	public Stat health;
 
 	void Awake(){
 		currentHealth = maxHealth;
 	}
 
-	// Simulation of Taking damage
-	void Update(){
-		if (Input.GetKeyDown (KeyCode.T)) {
-			DamageTaken (10);
-		}
 
-	}
-
-	public void DamageTaken(int damage){
-		currentHealth -= damage;
+	public void DamageTaken(int someDamage){
+		currentHealth -= someDamage;
 		Debug.Log (transform.name + " takes " + damage + " damage.");
 
 		if (currentHealth <= 0) {
