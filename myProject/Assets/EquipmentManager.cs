@@ -10,7 +10,6 @@ public class EquipmentManager : MonoBehaviour {
 		instance = this;
 	}
 	#endregion
-	*
 	// That callBack method will allow me to do something if something change in the inventory
 	public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
 	public OnEquipmentChanged onEquipmentChanged;
@@ -57,7 +56,7 @@ public class EquipmentManager : MonoBehaviour {
 			currentEquipment [slotIndex] = null;
 
 			if (onEquipmentChanged != null) {
-				onEquipmentChanged.Invoke (null, oldItem);
+				onEquipmentChanged.Invoke (null, oldEquipment);
 			}
 		}
 	}
