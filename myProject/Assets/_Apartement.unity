@@ -444,6 +444,71 @@ Transform:
   m_Father: {fileID: 941677590}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &125840049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 125840051}
+  - component: {fileID: 125840050}
+  m_Layer: 0
+  m_Name: Point light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &125840050
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125840049}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 61.661987
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &125840051
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125840049}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.6, y: 17.4, z: 5.9091787}
+  m_LocalScale: {x: 2.4015372, y: 1.6721874, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &147682283
 GameObject:
   m_ObjectHideFlags: 0
@@ -5493,6 +5558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a972c71f5448fe4cb6c997150ff491d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: []
+  maxSlots: 10
 --- !u!114 &2073344618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5602,6 +5669,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e2a9c7e914a85f4f830f8080e0aa656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  damage:
+    baseValue: 0
+  health:
+    baseValue: 0
 --- !u!114 &2073344625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5624,9 +5696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c57cd905b4ade74ebd6b256754ae001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementMask:
-    serializedVersion: 2
-    m_Bits: 256
+  focus: {fileID: 0}
 --- !u!1 &2096051457
 GameObject:
   m_ObjectHideFlags: 0
