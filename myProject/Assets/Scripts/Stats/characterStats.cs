@@ -3,7 +3,7 @@
 public class characterStats : MonoBehaviour {
 
 	public int maxHealth = 100;
-	public int currentHealth{ get; set;}
+	public static int currentHealth{ get; set;}
 
 	public Stat damage;
 	public Stat health;
