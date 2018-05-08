@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spawnHelp : MonoBehaviour {
+public class spawnCamp3 : MonoBehaviour {
 
 	public GameObject healthPrefab;
 
@@ -12,13 +12,13 @@ public class spawnHelp : MonoBehaviour {
 	public static int count;
 
 	public float bonusTime = 10f;
-	public int nbrBonus = 5;
+	private int nbrBonus = 2;
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if ((count < nbrBonus) && (bonusTime < 0)) {

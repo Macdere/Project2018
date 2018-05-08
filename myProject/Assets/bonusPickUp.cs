@@ -13,8 +13,6 @@ public class bonusPickUp : Interactable{
 
 	public int bonusHealth = 25;
 
-	public delegate void OnBonusChanged();
-	public OnBonusChanged onBonusChanged;
 
 	public override void Interact(){
 		base.Interact ();
@@ -24,10 +22,7 @@ public class bonusPickUp : Interactable{
 
 	void PickUp(){
 
-		if(onBonusChanged != null){
-			onBonusChanged.Invoke ();
-		}
-
+		playerStats.instance.gainHealth();
 		Destroy (gameObject);
 		spawnHelp.count--;
 	

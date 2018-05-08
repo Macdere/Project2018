@@ -805,7 +805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &76436996
 Transform:
   m_ObjectHideFlags: 0
@@ -1268,7 +1268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &96897498
 Transform:
   m_ObjectHideFlags: 0
@@ -1444,6 +1444,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 108665884}
+  - component: {fileID: 108665885}
   m_Layer: 0
   m_Name: Camp3
   m_TagString: Untagged
@@ -1467,6 +1468,22 @@ Transform:
   m_Father: {fileID: 28183022}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &108665885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 108665883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9621a4afc264f1489867227e8545b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPrefab: {fileID: 1529866804613960, guid: 95f0d2d1833513a4caf7a26cca349017,
+    type: 2}
+  center: {x: -17, y: 0, z: -58}
+  size: {x: 10, y: 5, z: 10}
+  bonusTime: 10
 --- !u!1 &110406729
 GameObject:
   m_ObjectHideFlags: 0
@@ -8128,7 +8145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &556247635
 Transform:
   m_ObjectHideFlags: 0
@@ -12309,6 +12326,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 840481120}
+  - component: {fileID: 840481121}
   m_Layer: 0
   m_Name: Camp1
   m_TagString: Untagged
@@ -12332,6 +12350,22 @@ Transform:
   m_Father: {fileID: 28183022}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &840481121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 840481119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f3bcc3aa1b07c74e98bfa6bf29ad4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPrefab: {fileID: 1529866804613960, guid: 95f0d2d1833513a4caf7a26cca349017,
+    type: 2}
+  center: {x: 9, y: 0, z: -101}
+  size: {x: 10, y: 4, z: 10}
+  bonusTime: 10
 --- !u!1001 &845440114
 Prefab:
   m_ObjectHideFlags: 0
@@ -22519,6 +22553,7 @@ MonoBehaviour:
   center: {x: 0, y: 0, z: 1}
   size: {x: 37, y: 5, z: 30}
   bonusTime: 10
+  nbrBonus: 5
 --- !u!1001 &1640637872
 Prefab:
   m_ObjectHideFlags: 0
@@ -24489,6 +24524,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1772657011}
+  - component: {fileID: 1772657012}
   m_Layer: 0
   m_Name: Camp2
   m_TagString: Untagged
@@ -24513,6 +24549,22 @@ Transform:
   m_Father: {fileID: 28183022}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1772657012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1772657010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b482144b0158a45baa698c95124001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPrefab: {fileID: 1529866804613960, guid: 95f0d2d1833513a4caf7a26cca349017,
+    type: 2}
+  center: {x: -19, y: 0, z: -87}
+  size: {x: 10, y: 5, z: 10}
+  bonusTime: 10
 --- !u!1001 &1781424744
 Prefab:
   m_ObjectHideFlags: 0
@@ -28794,7 +28846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2113806098
 Transform:
   m_ObjectHideFlags: 0
@@ -28988,6 +29040,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2121329850}
+  - component: {fileID: 2121329851}
   m_Layer: 0
   m_Name: Camp4
   m_TagString: Untagged
@@ -29011,6 +29064,22 @@ Transform:
   m_Father: {fileID: 28183022}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2121329851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2121329849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ea91ef764a3a9c438ca28ab66e6d21b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPrefab: {fileID: 1529866804613960, guid: 95f0d2d1833513a4caf7a26cca349017,
+    type: 2}
+  center: {x: 10, y: 0, z: -57}
+  size: {x: 10, y: 3, z: 10}
+  bonusTime: 10
 --- !u!1 &2124016498
 GameObject:
   m_ObjectHideFlags: 0
