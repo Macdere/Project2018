@@ -1,14 +1,20 @@
 ﻿using UnityEngine;
 
+
 public class characterStats : MonoBehaviour {
 
+	public static characterStats instance;
+
 	public int maxHealth = 100;
-	public static int currentHealth{ get; set;}
+
+	public int currentHealth{ get; set;}
 
 	public Stat damage;
 	public Stat health;
 
 	void Awake(){
+
+		instance = this;
 		currentHealth = maxHealth;
 	}
 
@@ -16,6 +22,7 @@ public class characterStats : MonoBehaviour {
 	public void DamageTaken(int someDamage){
 		currentHealth -= someDamage;
 		Debug.Log (transform.name + " takes " + someDamage + " damage.");
+		Debug.Log (currentHealth);
 
 		if (currentHealth <= 0) {
 			Die ();

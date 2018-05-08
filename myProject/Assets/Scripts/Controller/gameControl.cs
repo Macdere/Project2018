@@ -27,6 +27,5 @@ public class gameControl : MonoBehaviour {
 	}
 	// Test of data
 	void OnGUI(){
-		GUI.Label (new Rect (10, 10, 100, 30), "C Shap : " + cSharpKnowledge);
 	}
 }

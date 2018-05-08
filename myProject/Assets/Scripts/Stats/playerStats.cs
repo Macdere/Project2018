@@ -10,6 +10,8 @@ public class playerStats : characterStats {
 	void Start () {
 
 		EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
+		bonusPickUp.instance.onBonusChanged += OnBonusChanged;
+
 
 		// Need to keep the condition if the player don't restart a new game so he will already have picked up the items
 		if(inventorySystem.invent.Contains("schoolBag") && (inventorySystem.invent.Contains("Key"))){
@@ -42,6 +44,14 @@ public class playerStats : characterStats {
 			maxHealth -= oldItem.healthModifier;
 			currentHealth -= oldItem.healthModifier;
 			damage.removeModifier (oldItem.damageModifier);
+		}
+	}
+
+	void OnBonusChanged(){
+		if (currentHealth + bonusPickUp.instance.bonusHealth < maxHealth) {
+			currentHealth += bonusPickUp.instance.bonusHealth;
+		} else {
+			currentHealth += (maxHealth - currentHealth);
 		}
 	}
 

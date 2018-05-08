@@ -4,7 +4,17 @@ using UnityEngine;
 
 public class bonusPickUp : Interactable{
 
+	#region Singleton
+	public static bonusPickUp instance;
+	void Awake(){
+		instance = this;
+	}
+	#endregion
+
 	public int bonusHealth = 25;
+
+	public delegate void OnBonusChanged();
+	public OnBonusChanged onBonusChanged;
 
 	public override void Interact(){
 		base.Interact ();
@@ -14,9 +24,10 @@ public class bonusPickUp : Interactable{
 
 	void PickUp(){
 
-		Debug.Log ("Gain "+ bonusHealth +" Health");
+		if(onBonusChanged != null){
+			onBonusChanged.Invoke ();
+		}
 
-		characterStats.currentHealth += bonusHealth;
 		Destroy (gameObject);
 		spawnHelp.count--;
 	
