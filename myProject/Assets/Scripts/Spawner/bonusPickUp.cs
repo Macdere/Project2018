@@ -13,7 +13,6 @@ public class bonusPickUp : Interactable{
 
 	public int bonusHealth = 25;
 
-
 	public override void Interact(){
 		base.Interact ();
 
@@ -23,8 +22,12 @@ public class bonusPickUp : Interactable{
 	void PickUp(){
 
 		playerStats.instance.gainHealth();
+
+		healthUI.instance.healthModification(characterStats.instance.maxHealth, characterStats.instance.currentHealth);
+
 		Destroy (gameObject);
 		spawnHelp.count--;
+
 	
 	}
 }

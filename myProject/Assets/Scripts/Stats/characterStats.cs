@@ -12,6 +12,8 @@ public class characterStats : MonoBehaviour {
 	public Stat damage;
 	public Stat health;
 
+	public event System.Action<int,int> OnHealthChanged;
+
 	void Awake(){
 
 		instance = this;
@@ -22,8 +24,13 @@ public class characterStats : MonoBehaviour {
 	public void DamageTaken(int someDamage){
 		currentHealth -= someDamage;
 		Debug.Log (transform.name + " takes " + someDamage + " damage.");
-		Debug.Log (currentHealth);
 
+		//To update the healthbar
+		if (OnHealthChanged != null) {
+			OnHealthChanged (maxHealth, currentHealth);
+		}
+
+		// if health reach zero
 		if (currentHealth <= 0) {
 			Die ();
 		}

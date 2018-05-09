@@ -12,7 +12,7 @@ public class spawnCamp2 : MonoBehaviour {
 	public static int count;
 
 	public float bonusTime = 10f;
-	private int nbrBonus = 3;
+	private int nbrBonus = 2;
 
 	// Use this for initialization
 	void Start () {

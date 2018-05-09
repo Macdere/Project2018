@@ -41,6 +41,8 @@ public class playerStats : characterStats {
 		if ((Input.GetKey(KeyCode.H)) && (currentHealth < maxHealth)){
 			if (delay < 0){
 				currentHealth += 2;
+				// Adapt the healthBarUI Need to adapt because bug of full life
+				healthUI.instance.healthModification(characterStats.instance.maxHealth, characterStats.instance.currentHealth);
 				delay = 1;
 			}
 		}
