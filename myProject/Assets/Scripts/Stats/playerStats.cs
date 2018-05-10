@@ -12,11 +12,16 @@ public class playerStats : characterStats {
 	}
 	#endregion
 
+
+	healthUI myUI;
+
 	public static bool bagAndKey;
 	private float delay = 1 ;
 
 	// Use this for initialization
 	void Start () {
+
+		myUI = GetComponent<healthUI> ();
 
 		EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
 		currentHealth = 100;
@@ -42,7 +47,7 @@ public class playerStats : characterStats {
 			if (delay < 0){
 				currentHealth += 2;
 				// Adapt the healthBarUI Need to adapt because bug of full life
-				healthUI.instance.healthModification(characterStats.instance.maxHealth, characterStats.instance.currentHealth);
+				healthModification();
 				delay = 1;
 			}
 		}
@@ -74,6 +79,23 @@ public class playerStats : characterStats {
 			currentHealth += (maxHealth - currentHealth);
 		}
 
+	}
+
+	public void healthModification(){
+		if (myUI.ui != null) {
+			myUI.ui.gameObject.SetActive (true);
+			myUI.lastVisibleTime = Time.time;
+
+			float healthPercent = (float)currentHealth / maxHealth;
+			myUI.healthSlider.fillAmount = healthPercent;
+
+			Debug.Log (currentHealth);
+			Debug.Log (maxHealth);
+
+			if (currentHealth <= 0) {
+				Destroy (myUI.ui.gameObject);
+			}
+		}
 	}
 
 	public override void Die(){

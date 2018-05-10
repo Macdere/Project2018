@@ -16,10 +16,10 @@ public class healthUI : MonoBehaviour {
 	public GameObject uiPrefab;
 	public Transform target;
 	float timeOfVisibility = 5;
-	float lastVisibleTime;	
+	public float lastVisibleTime;	
 
-	Transform ui;
-	Image healthSlider;
+	public Transform ui;
+	public Image healthSlider;
 	Transform cam;
 
 	// Use this for initialization
@@ -52,19 +52,6 @@ public class healthUI : MonoBehaviour {
 		}
 	}
 
-	public void healthModification(int maxHealth, int currentHealth){
-		if (ui != null) {
-			ui.gameObject.SetActive (true);
-			lastVisibleTime = Time.time;
-
-			float healthPercent = (float)currentHealth / maxHealth;
-			healthSlider.fillAmount = healthPercent;
-
-			if (currentHealth <= 0) {
-				Destroy (ui.gameObject);
-			}
-		}
-	}
 
 
 	// Update is called once per frame

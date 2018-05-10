@@ -12,7 +12,8 @@ public class spawnHelp : MonoBehaviour {
 	public static int count;
 
 	public float bonusTime = 10f;
-	public int nbrBonus = 5;
+	// Only 1 bonus at the beginning because the bonuses in the camps will be transfered to the BossCamp
+	public int nbrBonus = 1;
 
 	// Use this for initialization
 	void Start () {
