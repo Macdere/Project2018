@@ -1,5 +1,11 @@
 This project uses the following items from Poly (http://poly.google.com):
 
+Title: Agile knight
+Author: Spiros Koutsourelis
+URL: https://poly.google.com/view/7aYuk5Rdlr-
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
 Title: Camp Site
 Author: Linus Ekenstam
 URL: https://poly.google.com/view/4PazXqve8xz
@@ -9,6 +15,12 @@ https://creativecommons.org/licenses/by/3.0/legalcode
 Title: chest
 Author: Vas Pupin
 URL: https://poly.google.com/view/1Ju1RPEoRpq
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Dwarf Cleric
+Author: Michael Morris
+URL: https://poly.google.com/view/c3YTUKIfXDv
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 

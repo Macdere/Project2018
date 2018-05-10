@@ -12,6 +12,7 @@ public class Interactable : MonoBehaviour {
 
 	Transform player;
 
+
 	public virtual void Interact(){
 		// This is meant to be overWritten
 		//Debug.Log("Interacting");
