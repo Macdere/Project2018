@@ -11,14 +11,17 @@ public class CheckPoint4 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (PlayerManager.instance.Save4) {
-
-			EnemyOne.SetActive (false);
-			EnemyTwo.SetActive (false);
-			item.SetActive (false);
+			if (EnemyOne != null && EnemyTwo != null && item != null) {
+				EnemyOne.SetActive (false);
+				EnemyTwo.SetActive (false);
+				item.SetActive (false);
+			}
 		} else {
-			EnemyOne.SetActive (true);
-			EnemyTwo.SetActive (true);
-			item.SetActive (true);
+			if (EnemyOne != null && EnemyTwo != null && item != null) {
+				EnemyOne.SetActive (true);
+				EnemyTwo.SetActive (true);
+				item.SetActive (true);
+			}
 		}
 	}
 }

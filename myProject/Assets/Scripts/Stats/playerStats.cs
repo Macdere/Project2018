@@ -89,8 +89,6 @@ public class playerStats : characterStats {
 			float healthPercent = (float)currentHealth / maxHealth;
 			myUI.healthSlider.fillAmount = healthPercent;
 
-			Debug.Log (currentHealth);
-			Debug.Log (maxHealth);
 
 			if (currentHealth <= 0) {
 				Destroy (myUI.ui.gameObject);
