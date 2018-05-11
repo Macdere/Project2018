@@ -73,4 +73,12 @@ public class EquipmentManager : MonoBehaviour {
 		}
 	}
 
+	public Equipment[] GetEquipmentArray(){
+		return currentEquipment;
+	}
+
+	public void setEquipmentArray(Equipment[] equipment){
+		currentEquipment = equipment;
+	}
+
 }

@@ -98,6 +98,14 @@ public class playerStats : characterStats {
 		}
 	}
 
+	public int GetCurrentHealth(){
+		return currentHealth;
+	}
+
+	public void setCurrentHealth(int Health){
+		currentHealth = Health;
+	}
+
 	public override void Die(){
 		base.Die ();
 		//Kill the player. I will maybe restart the scen if the player died
