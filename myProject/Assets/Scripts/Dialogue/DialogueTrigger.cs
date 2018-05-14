@@ -6,6 +6,9 @@ public class DialogueTrigger : Interactable {
 
 	public Dialogue dialogue;
 
+	public GameObject helloOne;
+	public GameObject helloTwo;
+
 	public void DialogueLocation(){
 		FindObjectOfType<DialogueManage> ().startDialogue (dialogue);
 	}
@@ -14,6 +17,10 @@ public class DialogueTrigger : Interactable {
 		base.Interact ();
 
 		DialogueLocation();
+
+		helloOne.SetActive (false);
+		helloTwo.SetActive (false);
+
 	}
 
 }

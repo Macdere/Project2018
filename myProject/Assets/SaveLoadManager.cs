@@ -33,8 +33,6 @@ public static class SaveLoadManager {
 			stream.Close ();
 			return data.gameInfo;
 
-
-
 		} else {
 			Debug.LogError ("File does not exist");
 			return new object[8];
@@ -49,7 +47,7 @@ public static class SaveLoadManager {
 		public object[] gameInfo;
 
 		public PlayerData(){
-			gameInfo = new object[11];
+			gameInfo = new object[9];
 
 			var playerObject = GameObject.Find("ThirdPersonController");
 			float x = playerObject.transform.position.x;
@@ -57,20 +55,19 @@ public static class SaveLoadManager {
 			float z = playerObject.transform.position.z;
 
 			int actualHealth = playerStats.instance.GetCurrentHealth();
-			Equipment[] equipmentArray = EquipmentManager.instance.GetEquipmentArray();
 			int index = SceneManager.GetActiveScene().buildIndex;
 
 			gameInfo[0] = x ; // Position player
 			gameInfo[1] = actualHealth; // CurrentHealth Player
 			//gameInfo[2] = inventorySystem.instance.inventory ; // Inventory
 			//gameInfo[3] = equipmentArray; // Equipment can't be serialize need an alternative same for inventory
-			gameInfo[4] = PlayerManager.instance.Save1; // bool Camp1
-			gameInfo[5] = PlayerManager.instance.Save2; // bool Camp2
-			gameInfo[6] = PlayerManager.instance.Save3; // bool Camp3
-			gameInfo[7] = PlayerManager.instance.Save4; // bool Camp4
-			gameInfo[8] = index; // set the scene we saved in.
-			gameInfo[9] = y ; // Position player
-			gameInfo[10] = z ; // Position player
+			gameInfo[2] = PlayerManager.instance.Save1; // bool Camp1
+			gameInfo[3] = PlayerManager.instance.Save2; // bool Camp2
+			gameInfo[4] = PlayerManager.instance.Save3; // bool Camp3
+			gameInfo[5] = PlayerManager.instance.Save4; // bool Camp4
+			gameInfo[6] = index; // set the scene we saved in.
+			gameInfo[7] = y ; // Position player
+			gameInfo[8] = z ; // Position player
 
 		}
 	}
