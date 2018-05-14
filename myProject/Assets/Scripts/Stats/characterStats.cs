@@ -24,6 +24,7 @@ public class characterStats : MonoBehaviour {
 	public void DamageTaken(int someDamage){
 		currentHealth -= someDamage;
 		Debug.Log (transform.name + " takes " + someDamage + " damage.");
+		playerStats.instance.updateHealthBar ();
 
 		//To update the healthbar
 		if (OnHealthChanged != null) {

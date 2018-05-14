@@ -29,6 +29,8 @@ public class bonusPickUp : Interactable{
 
 		playerStats.instance.healthModification();
 
+		playerStats.instance.updateHealthBar ();
+
 		Destroy (gameObject);
 		spawnHelp.count--;
 		

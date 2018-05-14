@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class playerStats : characterStats {
 
@@ -12,6 +13,9 @@ public class playerStats : characterStats {
 	}
 	#endregion
 
+	public Image barProgress;
+	public Text ourText;
+	public float ratio;
 
 	healthUI myUI;
 
@@ -25,6 +29,13 @@ public class playerStats : characterStats {
 
 		EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
 		currentHealth = 100;
+
+		float ratio = (float)currentHealth / maxHealth;
+		barProgress.fillAmount = 1f;
+		ourText.text = (ratio * 100).ToString ("0") + '%';
+		Debug.Log (currentHealth + " current Health");
+		Debug.Log (maxHealth + " maxHealth");
+		Debug.Log (ratio + " ration");
 
 		// Need to keep the condition if the player don't restart a new game so he will already have picked up the items
 		if(inventorySystem.invent.Contains("schoolBag") && (inventorySystem.invent.Contains("Key"))){
@@ -48,6 +59,7 @@ public class playerStats : characterStats {
 				currentHealth += 2;
 				// Adapt the healthBarUI Need to adapt because bug of full life
 				healthModification();
+				updateHealthBar ();
 				delay = 1;
 			}
 		}
@@ -70,6 +82,16 @@ public class playerStats : characterStats {
 			currentHealth -= oldItem.healthModifier;
 			damage.removeModifier (oldItem.damageModifier);
 		}
+	}
+
+	public void updateHealthBar(){
+		float ratio = (float)currentHealth / maxHealth;
+		barProgress.fillAmount = ratio;
+		ourText.text = (ratio * 100).ToString ("0") + '%';
+
+		Debug.Log (currentHealth + " current Health");
+		Debug.Log (maxHealth + " maxHealth");
+		Debug.Log (ratio + " ration");
 	}
 
 	public void gainHealth(){
@@ -95,6 +117,7 @@ public class playerStats : characterStats {
 			}
 		}
 	}
+
 
 	public int GetCurrentHealth(){
 		return currentHealth;
