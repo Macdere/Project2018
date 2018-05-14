@@ -1,0 +1,2 @@
+copperknight.bin -> FE3464C9704DBFE8A09923BC47767A86.bin
+copperknight_default_color.png -> 888A70D854671DDFAEB13817050130D8.png

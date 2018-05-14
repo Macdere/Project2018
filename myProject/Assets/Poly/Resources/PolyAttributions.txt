@@ -1,8 +1,20 @@
 This project uses the following items from Poly (http://poly.google.com):
 
+Title: 4 me hand
+Author: Isaac Balliet
+URL: https://poly.google.com/view/3bPjUHoNK6W
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
 Title: Agile knight
 Author: Spiros Koutsourelis
 URL: https://poly.google.com/view/7aYuk5Rdlr-
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Boots
+Author: Poly by Google
+URL: https://poly.google.com/view/7HbqG8RwRcA
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
@@ -18,6 +30,18 @@ URL: https://poly.google.com/view/1Ju1RPEoRpq
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
+Title: Copper Chest Piece
+Author: Spirit Ambassador
+URL: https://poly.google.com/view/9zPkhB0ZaT2
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: doomhammer
+Author: Alan Welch
+URL: https://poly.google.com/view/6_UwB4nuYnS
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
 Title: Dwarf Cleric
 Author: Michael Morris
 URL: https://poly.google.com/view/c3YTUKIfXDv
@@ -27,6 +51,12 @@ https://creativecommons.org/licenses/by/3.0/legalcode
 Title: Earth - Terrain
 Author: Robert Mirabelle
 URL: https://poly.google.com/view/2SkKFl4GjIr
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: hat
+Author: Minh Nguyen Tri
+URL: https://poly.google.com/view/fC4ubUqRJsa
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
