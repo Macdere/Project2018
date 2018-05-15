@@ -11,10 +11,13 @@ public class characterCombat : MonoBehaviour {
 	public float attackSpeed = 1f;
 	private float attackCooldown = 0f;
 
+	private Animator anim;
+
 	// Call Back method to know when we are attacking
 	public event System.Action OnAttack;
 
 	void Start(){
+		anim = GetComponent<Animator> ();
 		myStats = GetComponent<characterStats> ();
 	}
 
@@ -25,9 +28,8 @@ public class characterCombat : MonoBehaviour {
 	public void Attack(characterStats targetStats){
 
 		if(attackCooldown <= 0f){
-			
-			StartCoroutine (DoDamage (targetStats, attackDelay));
 
+			StartCoroutine (DoDamage (targetStats, attackDelay));
 			if (OnAttack != null) {
 				OnAttack ();
 			}
@@ -40,8 +42,10 @@ public class characterCombat : MonoBehaviour {
 	// Add delay to allow the animation to play for example wiating the sword to fall on the enemy
 	// before actually do the damage
 	IEnumerator DoDamage (characterStats stats, float delay){
+		
 		yield return new WaitForSeconds (delay);
 
+		anim.SetBool ("isAttacking", true);
 		stats.DamageTaken (myStats.damage.GetValue ());
 	}
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckPoint4 : MonoBehaviour {
+public class CheckPoint3 : MonoBehaviour {
 
 	public GameObject EnemyOne;
 	public GameObject EnemyTwo;
@@ -10,7 +10,7 @@ public class CheckPoint4 : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (PlayerManager.instance.Save4) {
+		if (PlayerManager.instance.Save3) {
 			if (EnemyOne != null && EnemyTwo != null && item != null) {
 				EnemyOne.SetActive (false);
 				EnemyTwo.SetActive (false);
