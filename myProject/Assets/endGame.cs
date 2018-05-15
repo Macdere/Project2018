@@ -5,25 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class endGame : MonoBehaviour {
 
+	#region Singleton
+	public static endGame instance;
+	void Awake(){
+		instance = this;
+	}
+	#endregion
+
 	public bool endOfGame;
 	public string endScene;
 
-	GameObject Boss;
+	public GameObject Boss;
 
 	// Use this for initialization
 	void Start () {
 		endOfGame = false;
-		Boss = gameObject;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Boss == null) {
 			endOfGame = true;
-
-			// Launch Animation of end of game.
-			SceneManager.LoadScene(endScene);
-
+		}
+		if (endOfGame) {
+			SceneManager.LoadScene (endScene);
 		}
 	}
 }

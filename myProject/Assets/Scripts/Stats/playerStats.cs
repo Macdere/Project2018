@@ -31,8 +31,12 @@ public class playerStats : characterStats {
 		currentHealth = 100;
 
 		float ratio = (float)currentHealth / maxHealth;
-		barProgress.fillAmount = 1f;
-		ourText.text = (ratio * 100).ToString ("0") + '%';
+		if (barProgress != null) {
+			barProgress.fillAmount = 1f;
+		}
+		if (ourText != null) {
+			ourText.text = (ratio * 100).ToString ("0") + '%';
+		}
 		/*Debug.Log (currentHealth + " current Health");
 		Debug.Log (maxHealth + " maxHealth");
 		Debug.Log (ratio + " ration");*/
