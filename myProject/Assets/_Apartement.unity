@@ -4336,6 +4336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endGameUI: {fileID: 1394328486}
+  triggerDoor: {fileID: 1160541639}
 --- !u!1 &1446273999
 GameObject:
   m_ObjectHideFlags: 0
@@ -5979,7 +5980,6 @@ GameObject:
   - component: {fileID: 2073344616}
   - component: {fileID: 2073344619}
   - component: {fileID: 2073344618}
-  - component: {fileID: 2073344625}
   - component: {fileID: 2073344626}
   - component: {fileID: 2073344617}
   - component: {fileID: 2073344624}
@@ -6143,17 +6143,6 @@ MonoBehaviour:
   barProgress: {fileID: 0}
   ourText: {fileID: 0}
   ratio: 0
---- !u!114 &2073344625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2073344615}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cc716e0575ad1f4aa58dc91999fce69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2073344626
 MonoBehaviour:
   m_ObjectHideFlags: 0
