@@ -5,6 +5,13 @@ using UnityEngine.UI;
 
 public class DialogueManage : MonoBehaviour {
 
+	#region Singleton
+	public static DialogueManage instance;
+	void Awake(){
+		instance = this;
+	}
+	#endregion
+
 	private Queue<string> sentences;
 
 	public Text NPCName;
@@ -43,7 +50,8 @@ public class DialogueManage : MonoBehaviour {
 		StartCoroutine (TypeSentence (sentence));
 	}
 
-	void endDialogue(){
+	public void endDialogue(){
+		StopAllCoroutines ();
 		anim.SetBool ("isOpen", false);
 	}
 

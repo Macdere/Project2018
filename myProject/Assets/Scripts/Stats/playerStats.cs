@@ -33,9 +33,9 @@ public class playerStats : characterStats {
 		float ratio = (float)currentHealth / maxHealth;
 		barProgress.fillAmount = 1f;
 		ourText.text = (ratio * 100).ToString ("0") + '%';
-		Debug.Log (currentHealth + " current Health");
+		/*Debug.Log (currentHealth + " current Health");
 		Debug.Log (maxHealth + " maxHealth");
-		Debug.Log (ratio + " ration");
+		Debug.Log (ratio + " ration");*/
 
 		// Need to keep the condition if the player don't restart a new game so he will already have picked up the items
 		if(inventorySystem.invent.Contains("schoolBag") && (inventorySystem.invent.Contains("Key"))){
@@ -89,9 +89,9 @@ public class playerStats : characterStats {
 		barProgress.fillAmount = ratio;
 		ourText.text = (ratio * 100).ToString ("0") + '%';
 
-		Debug.Log (currentHealth + " current Health");
+		/*Debug.Log (currentHealth + " current Health");
 		Debug.Log (maxHealth + " maxHealth");
-		Debug.Log (ratio + " ration");
+		Debug.Log (ratio + " ration");*/
 	}
 
 	public void gainHealth(){
