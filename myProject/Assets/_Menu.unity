@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a63ac393634ad47a28acc1128c02b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 330669441}
+  ThirdPersonController: {fileID: 0}
 --- !u!1 &271918223
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,10 +358,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!4 &330669441 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-  m_PrefabInternal: {fileID: 1636601920}
 --- !u!1 &427339729
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0875a99fa05cf134890ae724028b06b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: _Apartement
+  levelToLoad: _Settings
 --- !u!1 &760843809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,7 +1490,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2024869472}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 

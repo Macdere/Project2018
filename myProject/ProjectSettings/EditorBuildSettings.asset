@@ -14,3 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Apartement.unity
     guid: 95b46fd829c34d64d9a40fdc3f1525dc
+  - enabled: 1
+    path: Assets/_Settings.unity
+    guid: 841e0c6e2d9fd984e9d0fc228a960f59

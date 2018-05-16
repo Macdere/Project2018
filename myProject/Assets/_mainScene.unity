@@ -472,13 +472,13 @@ MonoBehaviour:
     sentences:
     - 'Hello my friend !
 
-      You are here to save us from "Boss". You will need to gain strenght and vitality
+      You are here to save us from "Rakor". You will need to gain strenght and vitality
       to reach the end of this adventure.'
     - "Euh sorry... I am Bj\xF6rg and you should probably ask yourself why am I here
       right ?"
     - It is simple, you have been sent to save us from the reign of this tyrant.
-    - You will need to get rid of each camp of "Boss"'s minions and get new items
-      to finally defeat him.
+    - You will need to get rid of each camp of Rakor's minions and get new items to
+      finally defeat him.
     - 'I hope you will free us all from his reign of terror
 
       Good Luck my friend !!'
@@ -21003,14 +21003,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173435806}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.138, z: -0}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -0, z: -0.189}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1899641284}
   m_Father: {fileID: 2143573396}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1173435808
 ParticleSystemRenderer:
   serializedVersion: 4
@@ -21125,7 +21125,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -474159253
+  randomSeed: 591587452
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -26261,6 +26261,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114244091485040540, guid: 6dd4968252b340c4d83f0cb86c1b6473,
+        type: 2}
+      propertyPath: inventory.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4889947364775772, guid: 6dd4968252b340c4d83f0cb86c1b6473, type: 2}
       propertyPath: m_LocalPosition.x
       value: 13.72
@@ -27654,6 +27659,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThirdPersonController: {fileID: 1500408090}
+--- !u!1 &1431538904 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1268113372352000, guid: 603f25ed5cd6fd240a9657c0c0cf689e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1864892541}
+--- !u!114 &1431538908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1431538904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a74ac0518ae7942a0f5eb969837311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startColor: {r: 0, g: 0.9632353, b: 0.12621693, a: 0}
+  newColor: {r: 0, g: 0, b: 0, a: 0}
+  duration: 1
 --- !u!1 &1435474775
 GameObject:
   m_ObjectHideFlags: 0
@@ -33913,18 +33937,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1864892547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1864892543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a74ac0518ae7942a0f5eb969837311, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startColor: {r: 0.3921569, g: 0.30588236, b: 0.24313727, a: 0}
 --- !u!1001 &1865495323
 Prefab:
   m_ObjectHideFlags: 0
@@ -34354,7 +34366,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1899641283}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 0, z: 0.29}
+  m_LocalPosition: {x: 0, y: -0.11, z: 0.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1173435807}
