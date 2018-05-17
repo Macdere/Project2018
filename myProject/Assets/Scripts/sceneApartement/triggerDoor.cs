@@ -53,6 +53,7 @@ public class triggerDoor : MonoBehaviour {
 			if (playerStats.bagAndKey == true) {
 				guiObject.SetActive (true);
 				if(Input.GetButtonDown("Use")){
+					FindObjectOfType<audioManager> ().Play ("doorOpen");
 					SceneManager.LoadScene (levelToLoad);
 				}
 			}

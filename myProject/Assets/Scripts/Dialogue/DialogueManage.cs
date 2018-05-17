@@ -28,6 +28,8 @@ public class DialogueManage : MonoBehaviour {
 
 		anim.SetBool ("isOpen", true);
 
+		FindObjectOfType<audioManager> ().Play ("openDialogue");
+
 		NPCName.text = dialogue.name;
 
 		sentences.Clear ();

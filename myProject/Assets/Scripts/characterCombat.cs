@@ -30,11 +30,9 @@ public class characterCombat : MonoBehaviour {
 		if(attackCooldown <= 0f){
 
 			StartCoroutine (DoDamage (targetStats, attackDelay));
-			if (gameObject.tag == "Player") {
-				FindObjectOfType<audioManager>().Play ("attackSword");
-			} else {
+			if (gameObject.tag != "Player") {
 				StartCoroutine (playSoundAfterSomeSec ());
-			}
+			} 
 			if (OnAttack != null) {
 				OnAttack ();
 			}

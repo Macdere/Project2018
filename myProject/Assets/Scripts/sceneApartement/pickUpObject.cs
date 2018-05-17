@@ -26,6 +26,9 @@ public class pickUpObject : MonoBehaviour {
 		if (other.gameObject.tag == "Player") {
 			guiObject.SetActive(true);
 			if(guiObject.activeInHierarchy == true && Input.GetButtonDown("Use")){
+
+				FindObjectOfType<audioManager> ().Play ("pickUp");
+
 				pickableObject.SetActive(false);
 
 				triggerBag.SetActive(false);

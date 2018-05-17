@@ -20,6 +20,9 @@ public class pickUpKey : MonoBehaviour {
 		if (other.gameObject.tag == "Player") {
 			guiObject.SetActive(true);
 			if(guiObject.activeInHierarchy == true && Input.GetButtonDown("Use")){
+
+				FindObjectOfType<audioManager> ().Play ("getKey");
+
 				pickableObject.SetActive(false);
 
 				triggerKey.SetActive(false);

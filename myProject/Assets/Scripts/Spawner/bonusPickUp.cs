@@ -31,6 +31,8 @@ public class bonusPickUp : Interactable{
 
 		playerStats.instance.updateHealthBar ();
 
+		FindObjectOfType<audioManager> ().Play ("pickUpHeal");
+
 		Destroy (gameObject);
 		spawnHelp.count--;
 		

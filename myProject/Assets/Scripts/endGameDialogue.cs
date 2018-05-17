@@ -7,6 +7,7 @@ public class endGameDialogue : MonoBehaviour {
 	bool finGame;
 	public GameObject endGameUI;
 	public GameObject triggerDoor;
+	public GameObject pressE;
 
 	public void Start(){
 		if (endGame.instance.endOfGame != null) {
@@ -19,6 +20,7 @@ public class endGameDialogue : MonoBehaviour {
 		if (finGame) {
 			endGameUI.SetActive (true);
 			triggerDoor.SetActive (false);
+			pressE.SetActive (false);
 		}
 	}
 }

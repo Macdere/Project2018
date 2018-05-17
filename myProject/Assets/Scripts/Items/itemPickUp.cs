@@ -16,6 +16,7 @@ public class itemPickUp : Interactable {
 
 		Debug.Log ("Picking up " + item.name);
 		bool pickedUp = inventorySystem.instance.Additem (item);
+		FindObjectOfType<audioManager> ().Play ("pickUp");
 		if (pickedUp) {
 			Destroy (gameObject);
 		}

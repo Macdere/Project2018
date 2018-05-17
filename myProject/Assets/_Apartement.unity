@@ -4379,6 +4379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endGameUI: {fileID: 1394328486}
   triggerDoor: {fileID: 1160541639}
+  pressE: {fileID: 1111327848}
 --- !u!1 &1446273999
 GameObject:
   m_ObjectHideFlags: 0

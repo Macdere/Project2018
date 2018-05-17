@@ -54,7 +54,43 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 652ff12a4b55294489d29f32554e078b, type: 3}
-    volume: 0.1
-    pitch: 1.07
+    volume: 0.01
+    pitch: 0.9
     loop: 1
+    source: {fileID: 0}
+  - name: attackSword
+    clip: {fileID: 8300000, guid: 325642e3dd96c554a877a81f900a04ed, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: pickUp
+    clip: {fileID: 8300000, guid: 41d67670c076d2d48a8f1a8d92613c96, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: pickUpHeal
+    clip: {fileID: 8300000, guid: a82c68ca62d01634d8066d617b432117, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: openDialogue
+    clip: {fileID: 8300000, guid: bf20d6f4257f1b14c90e8b4335cd43d3, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: getKey
+    clip: {fileID: 8300000, guid: 1b82e9e8cea85d742be04ce694edfd0f, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: doorOpen
+    clip: {fileID: 8300000, guid: 973dc635834423c46a202aa9c4f43310, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
