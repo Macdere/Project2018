@@ -35,6 +35,9 @@ public class characterStats : MonoBehaviour {
 		if (currentHealth <= 0) {
 			Die ();
 		}
+
+		if (gameObject.tag == "Player") {
+		}
 	}
 
 	public virtual void Die(){

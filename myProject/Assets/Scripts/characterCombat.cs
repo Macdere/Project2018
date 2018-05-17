@@ -8,7 +8,7 @@ public class characterCombat : MonoBehaviour {
 	characterStats myStats;
 
 	public float attackDelay = .6f;
-	public float attackSpeed = 1f;
+	//public float attackSpeed = 1f;
 	private float attackCooldown = 0f;
 
 	private Animator anim;
@@ -30,11 +30,16 @@ public class characterCombat : MonoBehaviour {
 		if(attackCooldown <= 0f){
 
 			StartCoroutine (DoDamage (targetStats, attackDelay));
+			if (gameObject.tag == "Player") {
+				FindObjectOfType<audioManager>().Play ("attackSword");
+			} else {
+				StartCoroutine (playSoundAfterSomeSec ());
+			}
 			if (OnAttack != null) {
 				OnAttack ();
 			}
 
-			attackCooldown = 1f / attackSpeed;
+			attackCooldown = 1.2f;
 		}
 	}
 
@@ -47,6 +52,13 @@ public class characterCombat : MonoBehaviour {
 
 		anim.SetBool ("isAttacking", true);
 		stats.DamageTaken (myStats.damage.GetValue ());
+	}
+
+	IEnumerator playSoundAfterSomeSec (){
+
+		yield return new WaitForSeconds (1.5f);
+		FindObjectOfType<audioManager>().Play ("attackSword");
+
 	}
 
 }

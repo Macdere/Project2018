@@ -8,14 +8,17 @@ public class PlayerControler : MonoBehaviour {
 
 	Camera cam;
 	public Interactable focus;
+	Rigidbody rig;
 
 	// Use this for initialization
 	void Start () {
 		cam = Camera.main;
+		rig = GetComponent<Rigidbody> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
 
 		//if(Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical")){
 		if(Input.GetButtonDown("deFocus")){
@@ -65,4 +68,5 @@ public class PlayerControler : MonoBehaviour {
 		focus = null;
 		//motor.stopFollowTarget ();
 	}
+
 }
